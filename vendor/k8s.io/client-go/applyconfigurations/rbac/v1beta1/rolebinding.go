@@ -43,7 +43,7 @@ func RoleBinding(name, namespace string) *RoleBindingApplyConfiguration {
 	b.WithName(name)
 	b.WithNamespace(namespace)
 	b.WithKind("RoleBinding")
-	b.WithAPIVersion("rbac.authorization.k8s.io/v1beta1")
+	b.WithAPIVersion("rbac.authorization.k8s.io/v1")
 	return b
 }
 
@@ -79,7 +79,7 @@ func extractRoleBinding(roleBinding *rbacv1beta1.RoleBinding, fieldManager strin
 	b.WithNamespace(roleBinding.Namespace)
 
 	b.WithKind("RoleBinding")
-	b.WithAPIVersion("rbac.authorization.k8s.io/v1beta1")
+	b.WithAPIVersion("rbac.authorization.k8s.io/v1")
 	return b, nil
 }
 

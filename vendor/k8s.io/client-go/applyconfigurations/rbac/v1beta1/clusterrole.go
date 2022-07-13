@@ -42,7 +42,7 @@ func ClusterRole(name string) *ClusterRoleApplyConfiguration {
 	b := &ClusterRoleApplyConfiguration{}
 	b.WithName(name)
 	b.WithKind("ClusterRole")
-	b.WithAPIVersion("rbac.authorization.k8s.io/v1beta1")
+	b.WithAPIVersion("rbac.authorization.k8s.io/v1")
 	return b
 }
 
@@ -77,7 +77,7 @@ func extractClusterRole(clusterRole *rbacv1beta1.ClusterRole, fieldManager strin
 	b.WithName(clusterRole.Name)
 
 	b.WithKind("ClusterRole")
-	b.WithAPIVersion("rbac.authorization.k8s.io/v1beta1")
+	b.WithAPIVersion("rbac.authorization.k8s.io/v1")
 	return b, nil
 }
 

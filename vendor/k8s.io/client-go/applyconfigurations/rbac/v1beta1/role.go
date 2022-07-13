@@ -42,7 +42,7 @@ func Role(name, namespace string) *RoleApplyConfiguration {
 	b.WithName(name)
 	b.WithNamespace(namespace)
 	b.WithKind("Role")
-	b.WithAPIVersion("rbac.authorization.k8s.io/v1beta1")
+	b.WithAPIVersion("rbac.authorization.k8s.io/v1")
 	return b
 }
 
@@ -78,7 +78,7 @@ func extractRole(role *rbacv1beta1.Role, fieldManager string, subresource string
 	b.WithNamespace(role.Namespace)
 
 	b.WithKind("Role")
-	b.WithAPIVersion("rbac.authorization.k8s.io/v1beta1")
+	b.WithAPIVersion("rbac.authorization.k8s.io/v1")
 	return b, nil
 }
 

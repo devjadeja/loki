@@ -42,7 +42,7 @@ func ClusterRoleBinding(name string) *ClusterRoleBindingApplyConfiguration {
 	b := &ClusterRoleBindingApplyConfiguration{}
 	b.WithName(name)
 	b.WithKind("ClusterRoleBinding")
-	b.WithAPIVersion("rbac.authorization.k8s.io/v1beta1")
+	b.WithAPIVersion("rbac.authorization.k8s.io/v1")
 	return b
 }
 
@@ -77,7 +77,7 @@ func extractClusterRoleBinding(clusterRoleBinding *rbacv1beta1.ClusterRoleBindin
 	b.WithName(clusterRoleBinding.Name)
 
 	b.WithKind("ClusterRoleBinding")
-	b.WithAPIVersion("rbac.authorization.k8s.io/v1beta1")
+	b.WithAPIVersion("rbac.authorization.k8s.io/v1")
 	return b, nil
 }
 
